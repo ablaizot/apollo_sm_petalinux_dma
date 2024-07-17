@@ -4,3 +4,5 @@
 CONFIG_gpio-demo
 CONFIG_peekpoke
 CONFIG_dma-proxy
+CONFIG_dmatest
+CONFIG_dmatest

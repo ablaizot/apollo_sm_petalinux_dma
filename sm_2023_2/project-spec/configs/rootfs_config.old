@@ -4080,6 +4080,7 @@ CONFIG_Init-manager-systemd=y
 # user packages 
 #
 CONFIG_dma-proxy=y
+CONFIG_dmatest=y
 # CONFIG_gpio-demo is not set
 # CONFIG_peekpoke is not set
 

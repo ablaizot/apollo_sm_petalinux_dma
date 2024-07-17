@@ -9,7 +9,7 @@ config SYSTEM_ZYNQMP
         bool "ZYNQMP Configuration"
         help
           ZYNQMP Configuration for petalinux project.
-          All these config options will be in /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/config
+          All these config options will be in /home/ablaizot/apollo_sm_petalinux/sm_2023_2/project-spec/configs/config
 
 
 config SUBSYSTEM_VARIANT_ZYNQMPEV
@@ -432,7 +432,7 @@ config SUBSYSTEM_AUTOCONFIG_U__BOOT
 endif
 endmenu
 
-source /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/configs/Kconfig.syshw
+source /home/ablaizot/apollo_sm_petalinux/sm_2023_2/project-spec/configs/configs/Kconfig.syshw
 
 choice
 	prompt "Subsystem Architecture"

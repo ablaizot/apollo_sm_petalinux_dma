@@ -1,14 +1,7 @@
-[DEBUG] Using xsct from : /tools/Xilinx/petalinux/tools/xsct/bin/xsct
-[DEBUG] Using conf/mconf from : /tools/Xilinx/petalinux/components/yocto/buildtools/sysroots/x86_64-petalinux-linux/usr/bin/mconf
-[INFO] Generating Kconfig for project
-[DEBUG] Running CMD: xsct -sdx -nodisp /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/hw-description.tcl plnx_gen_hwsysconf /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/hw-description/system.xsa /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/configs/Kconfig.syshw
-[DEBUG] WARNING: sdtgen package cannot be loaded. System Device tree commands will not 
- be available
-INFO: [Hsi 55-2053] elapsed time for repository (/tools/Xilinx/petalinux/tools/xsct/data/embeddedsw) loading 0 seconds
-hsi::open_hw_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 738.797 ; gain = 189.742 ; free physical = 8149 ; free virtual = 11334
-
+[DEBUG] Using xsct from : /work/Xilinx/petalinux/2023.2/tools/xsct/bin/xsct
+[DEBUG] Using conf/mconf from : /work/Xilinx/petalinux/2023.2/components/yocto/buildtools/sysroots/x86_64-petalinux-linux/usr/bin/mconf
 [INFO] Silentconfig project
-[DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/config conf /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/configs/Kconfig
+[DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ablaizot/apollo_sm_petalinux/sm_2023_2/project-spec/configs/config conf /home/ablaizot/apollo_sm_petalinux/sm_2023_2/project-spec/configs/configs/Kconfig
 [DEBUG] *
 * PetaLinux System Configuration
 *
@@ -161,7 +154,7 @@ Extra dts/dtsi files (SUBSYSTEM_EXTRA_DT_FILES) []
 *
 generate boot args automatically (SUBSYSTEM_BOOTARGS_AUTO) [Y/n/?] 
 enable kernel earlyprintk (SUBSYSTEM_BOOTARGS_EARLYPRINTK) [Y/n/?] 
-Auto generated bootargs (NO EDIT!) (SUBSYSTEM_BOOTARGS_GENERATED) [earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/nfs nfsroot=128.141.143.35:/export,tcp ip=dhcp rw] 
+Auto generated bootargs (NO EDIT!) (SUBSYSTEM_BOOTARGS_GENERATED) [earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/nfs nfsroot=172.17.0.1:/export,tcp ip=dhcp rw] 
 Add extra boot args (SUBSYSTEM_EXTRA_BOOTARGS) [] 
 Devicetree compiler flags (SUBSYSTEM_DEVICETREE_COMPILER_FLAGS) [-@] 
 Devicetree overlay (SUBSYSTEM_DTB_OVERLAY) [N/y/?] 
@@ -302,16 +295,13 @@ Enable Buildtools Extended (YOCTO_BUILDTOOLS_EXTENDED) [N/y/?]
 *
 user layer 0 (USER_LAYER_0) [] 
 #
-# configuration written to /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/config
+# configuration written to /home/ablaizot/apollo_sm_petalinux/sm_2023_2/project-spec/configs/config
 #
-[DEBUG] Running CMD: /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/petalinux-find-ipaddr AUTO
-[DEBUG] 128.141.143.35
+[DEBUG] Running CMD: /home/ablaizot/apollo_sm_petalinux/sm_2023_2/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/petalinux-find-ipaddr AUTO
+[DEBUG] 172.17.0.1
 
-[INFO] Generating kconfig for rootfs
-[DEBUG] Running CMD: python3 /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/rootfsconfigs/rootfs_config.py --generate_kconfig /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/meta-user/conf/user-rootfsconfig /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/rootfsconfigs
-[DEBUG] 
 [INFO] Silentconfig rootfs
-[DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/rootfs_config conf /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/rootfsconfigs/Kconfig
+[DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/ablaizot/apollo_sm_petalinux/sm_2023_2/project-spec/configs/rootfs_config conf /home/ablaizot/apollo_sm_petalinux/sm_2023_2/project-spec/configs/rootfsconfigs/Kconfig
 [DEBUG] *
 * Configuration
 *
@@ -3855,6 +3845,7 @@ choice[1-2]: *
 * user packages 
 *
 dma-proxy (dma-proxy) [Y/n/?] 
+dmatest (dmatest) [Y/n/?] 
 gpio-demo (gpio-demo) [N/y/?] 
 peekpoke (peekpoke) [N/y/?] 
 *
@@ -3865,17 +3856,5 @@ Create new Groups (CREATE_NEW_GROUPS) [aie;]
 Add Users to Groups (ADD_USERS_TO_GROUPS) [petalinux:audio,video,aie,input;] 
 Add Users to Sudo users (ADD_USERS_TO_SUDOERS) [petalinux] 
 #
-# configuration written to /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/rootfs_config
+# configuration written to /home/ablaizot/apollo_sm_petalinux/sm_2023_2/project-spec/configs/rootfs_config
 #
-[INFO] Adding user layers
-[DEBUG] Adding layer: /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/meta-user
-[DEBUG] Running CMD: bitbake-layers -F add-layer /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/meta-user
-[DEBUG] NOTE: Starting bitbake server...
-NOTE: Started PRServer with DBfile: /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/build/cache/prserv.sqlite3, Address: 127.0.0.1:40751, PID: 23124
-
-[INFO] Generating machine conf file
-[INFO] Generating plnxtool conf file
-[DEBUG] Running CMD: nslookup -timeout=10 gitenterprise.xilinx.com | grep "Address" |                 awk '{print $2}' | sed -n 2p
-[DEBUG] 
-[DEBUG] Running CMD: python3 /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/rootfsconfigs/rootfs_config.py --update_cfg /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/rootfs_config /home/madorsky/github/petalinux/apollo/apollo_sm_petalinux/sm_2023_2/project-spec/configs/plnxtool.conf zynqmp
-[DEBUG] 

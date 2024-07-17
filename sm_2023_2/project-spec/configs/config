@@ -311,4 +311,4 @@ CONFIG_YOCTO_NETWORK_SSTATE_FEEDS_URL="http://petalinux.xilinx.com/sswreleases/r
 #
 CONFIG_USER_LAYER_0=""
 CONFIG_SUBSYSTEM_PRELOADED_BL33_BASE=0x8000000
-CONFIG_SUBSYSTEM_BOOTARGS_GENERATED="earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/nfs nfsroot=128.141.143.35:/export,tcp ip=dhcp rw"
+CONFIG_SUBSYSTEM_BOOTARGS_GENERATED="earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/nfs nfsroot=172.17.0.1:/export,tcp ip=dhcp rw"
